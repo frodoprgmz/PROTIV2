@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.9" client="site" method="upgrade">
+    <name>Header Menu</name>
+    <version>1.0.0</version>
+    <description>Moduł wyświetlający menu w nagłówku</description>
+    <files>
+        <filename module="mod_header">mod_header.php</filename>
+    </files>
+</extension>

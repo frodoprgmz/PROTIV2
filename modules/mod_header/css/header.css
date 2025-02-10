@@ -1,0 +1,75 @@
+/* Ogólne style dla nawigacji */
+body{
+    margin: 0;
+}
+nav {
+    background-color: #2c3e50; /* Ciemnoniebieskie tło */
+    padding: 10px 20px;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+}
+
+.header-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Responsywność */
+}
+
+.header-menu li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.header-menu li a {
+    color: #ecf0f1; /* Jasny kolor tekstu */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.header-menu li a:hover {
+    color: #3498db; /* Kolor tekstu po najechaniu */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtelne tło po najechaniu */
+    border-radius: 4px;
+}
+
+/* Efekt podkreślenia po najechaniu */
+.header-menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-menu li a:hover::after {
+    width: 100%;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .header-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-menu li {
+        margin: 10px 0;
+    }
+
+    .header-menu li a {
+        padding: 8px 10px;
+    }
+}
